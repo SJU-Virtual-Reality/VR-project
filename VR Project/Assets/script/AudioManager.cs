@@ -11,7 +11,7 @@ public class Sound
 
 public class AudioManager : MonoBehaviour
 {
-    public static AudioManager instance;
+    private static AudioManager instance = null;
 
     [SerializeField] Sound[] sfx = null;
     [SerializeField] Sound[] bgm = null;

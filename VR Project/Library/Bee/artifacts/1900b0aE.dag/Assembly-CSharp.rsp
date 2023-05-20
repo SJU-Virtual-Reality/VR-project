@@ -364,7 +364,6 @@
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEngine.SpatialTracking.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEngine.UI.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEngine.XR.LegacyInputHelpers.ref.dll"
-"Assets/Scenes/Ha/test.cs"
 "Assets/Scenes/Park/FSM/FSM.cs"
 "Assets/Scenes/Park/FSM/FSM_Prototype.cs"
 "Assets/Scenes/Park/FSM/PlayerTest.cs"
