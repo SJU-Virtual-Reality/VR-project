@@ -7,16 +7,13 @@ using UnityEngine.SceneManagement;
 
 public class UIManager : MonoBehaviour
 {
-    // Start is called before the first frame update
     public GameManager gameManager;
     public TMP_Text subtitle;
     public TMP_Text heightText;
     public TMP_Text locationText;
     public Slider gauge;
 
-    public Panel positionPanel;
-
-    public int sceneNumber = 1;
+    public GameObject positionPanel;
 
     public void Awake()
     {
@@ -30,8 +27,8 @@ public class UIManager : MonoBehaviour
 
     private void Update()
     {
-        // heightText.text =  "고도 : " + gameManager.getHeight();
-        // locationText.text = "위치 : " + gameManager.getPosition();
+        heightText.text =  "고도 : " + gameManager.getHeight() + "m";
+        locationText.text = "위치 : " + gameManager.getPosition();
     }
 
     public void ChangeSubtitle(string text)
@@ -65,13 +62,11 @@ public class UIManager : MonoBehaviour
     }
 
     public void ShowSubtitle() { 
-        subTitle.enabled = true;
+        subtitle.enabled = true;
     }
 
     public void SwitchSceneByNumber(int number) {
-        sceneNumber = number;
-
-        switch(sceneNumber) {
+        switch(number) {
             case 1:
             this.HideUIObject();
             break;
@@ -125,7 +120,7 @@ public class UIManager : MonoBehaviour
     }
 
     public void HideUIObject() {
-        subTitle.enabled = false;
+        subtitle.enabled = false;
         positionPanel.gameObject.SetActive(false);
         gauge.gameObject.SetActive(false);
     }

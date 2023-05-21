@@ -29,9 +29,9 @@ public class FSM_Prototype : MonoBehaviour
     IEnumerator Create_Sword()
     {
         yield return new WaitForSeconds(3f);
-        //¿ÀÁ¸ »ý¼º ¹× °Ë ÇÕÃÄÁö´Â ÀÌÆåÆ® 
-        //°Ë »ý¼º »ç¿îµå
-        //ÄÁÆ®·Ñ·¯ Áøµ¿ ¿¬°á
+        //ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Æ® 
+        //ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+        //ï¿½ï¿½Æ®ï¿½Ñ·ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
         Prepare.Invoke();
     }
 
@@ -50,7 +50,7 @@ public class FSM_Prototype : MonoBehaviour
     {
         /*
         Debug.Log("Init");
-        //ÄÁÆ®·Ñ·¯ »¡°£ ºû ¸ÅÇÎ 
+        //ï¿½ï¿½Æ®ï¿½Ñ·ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ 
         Init_Start.Invoke();
         StartCoroutine(Create_Sword());
         Init_End.Invoke();
@@ -60,13 +60,13 @@ public class FSM_Prototype : MonoBehaviour
     private void Init_Update()
     {
         /*
-        //»ç¿ëÀÚ°¡ °Ë°ú »óÈ£ÀÛ¿ëÇÑ °æ¿ì
+        //ï¿½ï¿½ï¿½ï¿½Ú°ï¿½ ï¿½Ë°ï¿½ ï¿½ï¿½È£ï¿½Û¿ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½
         if (GameManager.GetComponent<GameManager>().isGrabSword == true)
         {
-            //¿¬°áµÇ¾î¾ß ÇÏ´Â ÇÔ¼ö
-            //ÄÁÆ®·Ñ·¯ 1ÃÊ°£ Áøµ¿
-            //°Ë¿¡ ºÓÀº ºû ÀÌÆåÆ®
-            //ÄÁÆ®·Ñ·¯¿¡ °Ë ¸ÅÇÎ
+            //ï¿½ï¿½ï¿½ï¿½Ç¾ï¿½ï¿½ ï¿½Ï´ï¿½ ï¿½Ô¼ï¿½
+            //ï¿½ï¿½Æ®ï¿½Ñ·ï¿½ 1ï¿½Ê°ï¿½ ï¿½ï¿½ï¿½ï¿½
+            //ï¿½Ë¿ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Æ®
+            //ï¿½ï¿½Æ®ï¿½Ñ·ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
             Grab_Sword.Invoke();
             fsm.ChangeState(States.Tutorial);
         }
@@ -75,15 +75,15 @@ public class FSM_Prototype : MonoBehaviour
 
     private void Tutorial_Enter()
     {
-        //¿ÀÁ¸ »ý¼º
-        //¿ÀÁ¸ ÆÄ±«ÇÏ¶ó´Â ÀÚ¸· Á¦°ø
+        //ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+        //ï¿½ï¿½ï¿½ï¿½ ï¿½Ä±ï¿½ï¿½Ï¶ï¿½ï¿½ ï¿½Ú¸ï¿½ ï¿½ï¿½ï¿½ï¿½
         //Tutorial_Start.Invoke();
     }
 
     private void Tutorial_Update() 
     {
         /*
-        //Ã¹ ¿ÀÁ¸ÀÌ ÆÄ±«µÉ °æ¿ì
+        //Ã¹ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ä±ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½
         if (GameManager.GetComponent<GameManager>().isOzoneBroke == true)
         {
             fsm.ChangeState(States.Start);
@@ -93,15 +93,15 @@ public class FSM_Prototype : MonoBehaviour
 
     private void Start_Enter()
     {
-        //¿ÀÁ¸ ÆÄ±« °ÔÀÌÁö UI Á¦°ø
-        //ÇÊ¿äÇÒ ½Ã ¿ÀÁ¸ »ý¼ºÇÏ´Â ÄÄÆ÷³ÍÆ® È°¼ºÈ­ ½ÃÅ³ ¼ö ÀÖÀ½ (coroutin È°¿ëÇÏ¿© »ý¼º ÁÖ±â ¸¸µé±â °¡´É)
+        //ï¿½ï¿½ï¿½ï¿½ ï¿½Ä±ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ UI ï¿½ï¿½ï¿½ï¿½
+        //ï¿½Ê¿ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ® È°ï¿½ï¿½È­ ï¿½ï¿½Å³ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ (coroutin È°ï¿½ï¿½ï¿½Ï¿ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ö±ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½)
         //Start_Start.Invoke();
     }
 
     private void Start_Update()
     {
         /*
-        //°ÔÀÌÁö°¡ ´Ù Ã¤¿öÁ³´Ù¸é
+        //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ Ã¤ï¿½ï¿½ï¿½ï¿½ï¿½Ù¸ï¿½
         if (GameManager.GetComponent<GameManager>().ifFullGauge == true)
         {
             fsm.ChangeState(States.End);
